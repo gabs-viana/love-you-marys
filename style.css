@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    justify-content: flex-start; /* Mantém alinhado ao topo */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh;
+    margin: 0;
+    padding-top: 2rem; /* Espaço do topo */
+}
+
+.link {
+    width: 35rem;
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Apenas para deixar a borda arredondada */
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.carrossel{
+    height: 55rem;
+    width: 35rem;  
+    margin-top: 2rem; 
+}
+
+.carrossel fieldset{
+    border: 1px solid rgb(255 78 109);  
+    border-radius: 5px;
+    height: 55rem;
+    width: 33.25rem;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    width: 109%; /* Definido como 100% por imagem (5 imagens), então 5 * 100% */
+    transition: transform 1s ease; /* Faz a transição suave entre as imagens */
+    padding-right: 1rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Isso vai centralizar a imagem */
+}
+
+.contador{
+    height: 10rem;
+    width: 35rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+}
+
+.contador p {
+    font-size: 1.5rem;
+}
+
+.contador span {
+    font-size: 1.2rem;
+    display: block;
+}
+
+.contador hr{
+    width: 10rem;
+    margin-top: 2rem;
+    border: 1px solid #515151;
+}
+
+.textinho{
+    height: 10rem;
+    width: 18rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+}
+
+.video{
+    margin-top: 12rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+}
+
+
+/* ------------------ Responsividade ------------------ */
+
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+    
+    .carrossel {
+        height: 90rem;
+        width: 90%;
+        margin: 2rem auto; /* Centraliza o carrossel */
+    }
+
+    .carrossel fieldset {
+        width: 23rem;
+        height: 43rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .image-container {
+        display: flex;
+        width: 115%; /* Definido como 100% por imagem (5 imagens), então 5 * 100% */
+        transition: transform 1s ease; /* Faz a transição suave entre as imagens */
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%; /* Garantir que a imagem ocupe toda a altura do contêiner */
+        object-fit: cover;
+        object-position: top; /* Isso evita que a parte inferior da imagem seja cortada */
+    }
+
+    .contador {
+        width: 90%;
+        font-size: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .contador p {
+        font-size: 1.5rem;
+    }
+
+    .contador span {
+        font-size: 1rem;
+    }
+
+    .contador hr{
+        margin-top: 40px;
+    }
+
+    .textinho{
+        font-size: 19px;
+    }
+
+    .link {
+        width: 90%;
+        font-size: 17px;
+    }
+
+    /* Ajuste para o iframe do vídeo */
+    .video iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+/* Ajustes para telas muito pequenas (por exemplo, smartphones em modo retrato)
+@media (max-width: 480px) {
+
+    .contador {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .contador p {
+        font-size: 1.1rem;
+    }
+
+    .contador span {
+        font-size: 0.9rem;
+    }
+
+    .video iframe {
+        height: 160px;
+    }
+
+    .link {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .textinho {
+        width: 90%;
+    }
+} */
