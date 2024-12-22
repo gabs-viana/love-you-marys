@@ -107,19 +107,19 @@ body {
     .carrossel {
         height: 90rem;
         width: 90%;
-        margin: 2rem auto; /* Centraliza o carrossel */
+        margin-right: 10px;
     }
 
     .carrossel fieldset {
-        width: 23rem;
-        height: 43rem;
+        width: 20.8rem;
+        height: 39rem;
         margin: 0 auto;
         padding: 0;
     }
 
     .image-container {
         display: flex;
-        width: 115%; /* Definido como 100% por imagem (5 imagens), então 5 * 100% */
+        width: 111%; /* Definido como 100% por imagem (5 imagens), então 5 * 100% */
         transition: transform 1s ease; /* Faz a transição suave entre as imagens */
     }
     
@@ -155,6 +155,7 @@ body {
     .link {
         width: 90%;
         font-size: 17px;
+        height: 2rem;
     }
 
     /* Ajuste para o iframe do vídeo */
