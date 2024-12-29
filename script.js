@@ -1,15 +1,14 @@
-let currentIndex = 0; // Índice da imagem atual
-const images = document.querySelectorAll('.image-container img');
-const totalImages = images.length;
-const padding = 1; // 1rem de padding direito
+let currentIndex = 0; // Índice da mídia atual
+const elements = document.querySelectorAll('.image-container img, .image-container video'); // Seleciona imagens e vídeos
+const totalElements = elements.length;
 
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % totalImages; // Incrementa o índice, e reinicia ao chegar no fim
-    const offset = -(currentIndex * (100 - padding)); // Subtrai o padding da largura do deslocamento
-    document.querySelector('.image-container').style.transform = `translateX(${offset}%)`; // Aplica o deslocamento
+function showNextElement() {
+    currentIndex = (currentIndex + 1) % totalElements; // Incrementa o índice, reinicia ao final
+    const offset = -currentIndex * 100; // Calcula o deslocamento
+    document.querySelector('.image-container').style.transform = `translateX(${offset}%)`;
 }
 
-setInterval(showNextImage, 6000); // Chama a função a cada 6 segundos
+setInterval(showNextElement, 6000); // Muda para o próximo a cada 6 segundos
 
 // Defina a data inicial (30/09/2024)
 const startDate = new Date("2024-09-30T00:00:00");

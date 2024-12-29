@@ -34,10 +34,13 @@ body {
     border: 1px solid rgb(255 78 109);  
     border-radius: 5px;
     height: 55rem;
-    width: 34.5rem;
-    overflow: hidden;
+    width: 100%; /* Garante que todo o conteúdo caiba */
     margin: 0 auto;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .image-container {
@@ -53,6 +56,14 @@ body {
     object-fit: cover;
     object-position: center; /* Isso vai centralizar a imagem */
 }
+
+.image-container video {
+    width: 100%; /* Ajusta o vídeo ao tamanho do container */
+    height: 60rem; /* Ajusta a altura proporcional ao container */
+    object-fit: cover; /* Garante que o vídeo se ajuste corretamente */
+    object-position: center; /* Centraliza o vídeo no espaço disponível */
+}
+
 
 .contador{
     height: 10rem;
@@ -112,7 +123,7 @@ body {
 
     .carrossel fieldset {
         width: 22.2rem;
-        height: 39rem;
+        height: 35rem;
         margin: 0 auto;
         padding: 0;
     }
@@ -128,7 +139,16 @@ body {
         height: 100%; /* Garantir que a imagem ocupe toda a altura do contêiner */
         object-fit: cover;
         object-position: top; /* Isso evita que a parte inferior da imagem seja cortada */
+        margin-top: 1rem;
     }
+
+    .image-container video {
+        width: 100%; /* Ajusta o vídeo ao tamanho do container */
+        height: 100%; /* Ajusta a altura proporcional ao container */
+        object-fit: cover; /* Garante que o vídeo se ajuste corretamente */
+        object-position: center; /* Centraliza o vídeo no espaço disponível */
+    }
+    
 
     .contador {
         width: 90%;
