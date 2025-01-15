@@ -11,7 +11,7 @@ function showNextElement() {
 setInterval(showNextElement, 6000); // Muda para o próximo a cada 6 segundos
 
 // Defina a data inicial (30/09/2024)
-const startDate = new Date("2024-09-30T00:00:00");
+const startDate = new Date("2025-01-01T00:00:00");
 
 // Função para calcular a diferença de tempo e atualizar o contador
 function updateTime() {
